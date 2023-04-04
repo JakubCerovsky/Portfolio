@@ -1,0 +1,7 @@
+.main-container{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    flex-direction: row;
+}

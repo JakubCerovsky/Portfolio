@@ -1,0 +1,46 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.navbar-photo{
+    max-width: 200px;
+    border-radius: 100px;
+}
+
+.icons{
+    transition: 0.5s;
+}
+
+.icons:hover{
+    transform:translateY(-5px);
+}
+
+.intro_specials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.socials{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    align-items: center;
+    list-style: none;
+}
+
+.contact-me-btn{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
