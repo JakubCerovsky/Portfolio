@@ -1,19 +1,38 @@
 import React from 'react';
 import './projects.css';
 
-const Projects = () => {
+const Projects = ({updateChildState, resetChildState}) => {
+ 
+  const handleState1Click = () => {
+    resetChildState();
+    updateChildState("Zealand");
+
+  };
+
+  const handleState2Click = () => {
+    resetChildState();
+    updateChildState("GPT3");
+
+  };
+
+  const handleState3Click = () => {
+    resetChildState();
+    updateChildState("Paddle");
+
+  };
+
   return (
     <div className='projects-container left-border'>
-      <h2 className='projects-title'>Projects</h2>
+      <h2 className='projects-title bottom-border'>Projects</h2>
       <ul className="projects-links">
           <li>
-            <a href="/">Zealand Marketplace</a>
+            <button onClick={handleState1Click}>Zealand Marketplace</button>
           </li>
           <li>
-            <a href="/">GPT3 - Recreation</a>
+            <button onClick={handleState2Click}>GPT3 - Recreation</button>
           </li>
           <li>
-            <a href="/">Paddle Nation</a>
+            <button onClick={handleState3Click}>Paddle Nation</button>
           </li>
         </ul>
     </div>

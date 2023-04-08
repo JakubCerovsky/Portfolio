@@ -1,0 +1,15 @@
+.skills-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills{
+    transition: 0.5s;
+    /* filter: drop-shadow(0px 0px 1px rgba(254, 238, 238, 0.25)); */
+}
+
+.skills:hover{
+    transform:scale(1.1);
+    color: var(--color-light) !important;
+}

@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { ImGithub } from 'react-icons/im';
 import {BsLinkedin, BsFillFileEarmarkPersonFill} from 'react-icons/bs';
 import { IconContext } from "react-icons";
 import './navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ updateParentState }) => {
+
+  const [value, setValue] = useState(null);
+
+  const handleButtonClick = () => {
+    const newState = "Contact";
+    setValue(newState);
+    updateParentState(newState);
+  };
+
+
   return (
     <div className='navbar-container'>
       <div>
@@ -24,7 +34,7 @@ const Navbar = () => {
           </li>
         </ul>
         </IconContext.Provider>
-        <button className='contact-me-btn'>Contact me!</button>
+        <button onClick={handleButtonClick} className='contact-me-btn'>Contact me!</button>
       </div>
     </div>
   )

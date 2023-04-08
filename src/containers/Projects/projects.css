@@ -5,31 +5,46 @@
     align-items: flex-start;
     margin-left: 5rem;
     padding-left: 5rem;
+    width: 30%;
 }
 
 .projects-links{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     list-style: none;
     height: 60%;
+    width: 100%;
 }
 
 .projects-title{
     color: var(--color-light);
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--color-grey);
 }
 
-.projects-links li a{
-    font-size: 20px;
+.projects-links li{
+  width: 100%;
+}
+
+.projects-links li button{
+  text-align: left;
+    font-size: 18px;
     font-weight: 500;
+    width: 80%;
     text-decoration: none;
+    padding: 12px 24px;
     color: var(--color-light);
+    background-color: var(--color-grey);
+    border-radius: 4px;
+    outline: none;
+    border: none;
     transition: 0.5s ease;
+    transition-delay: 0.1s;
+    cursor: pointer;
 }
 
-.projects-links li a:hover{
+
+.projects-links li button:hover{
     margin-left: 1rem;
 }
