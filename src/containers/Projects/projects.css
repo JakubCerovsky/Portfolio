@@ -118,3 +118,10 @@
       font-size: 15px;
     }
 }
+
+@media screen and (max-width:450px)
+ {
+    .projects-links li button{
+      width: 100%;
+    }
+}
