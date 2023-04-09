@@ -121,7 +121,7 @@
 
 @media screen and (max-width:450px)
  {
-    .projects-links li button{
+    .projects-links li{
       width: 100%;
     }
 }
