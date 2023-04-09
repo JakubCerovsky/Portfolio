@@ -47,7 +47,7 @@ const Main = () => {
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 }
-            }}  className='content-container'><Content key={"Zealand Marketplace"} title={"Zealand Marketplace"} text={"Blazor Web Application with C# and Azure Database, working as a second-hand marketplace. Other technologies used were Entity Framework Code First Approach and MySQL. Users can log in or register themselves, add items and create reviews. No payment methods were implemented."} text2={"View my Projects, Articles, Resumé, Contact Me, or send me an email at hellocodewonders@gmail.com."}/>
+            }}  className='content-container'><Content key={"Zealand Marketplace"} title={"Zealand Marketplace"} text={"Blazor Web Application with C# and Azure Database, working as a second-hand marketplace. Other technologies used were Entity Framework Code First Approach and MySQL. Users can log in or register themselves, add items and create reviews. No payment methods were implemented."} text2={""}/>
           </motion.div>}
           {active === "GPT3" && <motion.div variants={variants}
             key="gpt3"
@@ -66,7 +66,7 @@ const Main = () => {
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 }
-            }}  className='content-container'><Content key={"Paddle Nation"} title={"Paddle Nation"} text={"As a part of a group created by students of VIA, I am working as a Full-Stack Developer with a focus on the front end. Paddle Nation is in the developing stage with the vision of creating a system with renting and payment methods. C#, React, and Rest API, the leading technologies used for the system functionality."} text2={"View my Projects, Articles, Resumé, Contact Me, or send me an email at hellocodewonders@gmail.com."} /></motion.div>}
+            }}  className='content-container'><Content key={"Paddle Nation"} title={"Paddle Nation"} text={"As a part of a group created by students of VIA, I am working as a Full-Stack Developer with a focus on the front end. Paddle Nation is in the developing stage with the vision of creating a system with renting and payment methods. C#, React, and Rest API, the leading technologies used for the system functionality."} text2={"Project will be soon deployed and available for customers."} /></motion.div>}
           {active === "Contact" && <motion.div variants={variants}
             key="contact"
             initial="enter"
