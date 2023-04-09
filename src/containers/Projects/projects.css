@@ -5,22 +5,26 @@
     align-items: flex-start;
     margin-left: 5rem;
     padding-left: 5rem;
-    width: 30%;
+    width: 35%;
+    border-left: 5px solid var(--color-grey);
 }
 
 .projects-links{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     list-style: none;
-    height: 60%;
+    height: 65%;
     width: 100%;
 }
 
 .projects-title{
     color: var(--color-light);
     margin-bottom: 1rem;
+    font-size: 28px;
+    border-right: 4px solid var(--color-grey); /* The typwriter cursor */
+    padding-right: 1rem;
 }
 
 .projects-links li{
@@ -31,7 +35,7 @@
   text-align: left;
     font-size: 18px;
     font-weight: 500;
-    width: 80%;
+    width: 70%;
     text-decoration: none;
     padding: 12px 24px;
     color: var(--color-light);
@@ -47,4 +51,70 @@
 
 .projects-links li button:hover{
     margin-left: 1rem;
+}
+
+@media screen and (max-width:1450px)
+ {
+    .projects-links li button{
+      width: 100%;
+    }
+}
+
+
+@media screen and (max-width:1200px)
+ {
+    .projects-container{
+      padding-left: 3rem;
+      margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:800px)
+ {
+    .projects-container{
+      padding-left: 2rem;
+      margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:700px)
+ {
+    .projects-container{
+      margin-left: 0;
+      margin-top: 1rem;
+      padding-left: 0;
+      border: none;
+      width: 100%;
+    }
+    .projects-links{
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .projects-links li{
+      width: 49%;
+      margin-bottom: 2%;
+    }
+    .projects-links li:last-child{
+      width: 100%;
+    }
+    .projects-links li button{
+      padding: 8px 18px;
+      text-align: center;
+    }
+
+    .projects-links li button:hover{
+      margin-left: 0;
+    }
+}
+
+@media screen and (max-width:500px)
+ {
+    .projects-title{
+      font-size: 20px;
+    }
+    .projects-links li button{
+      font-size: 15px;
+    }
 }

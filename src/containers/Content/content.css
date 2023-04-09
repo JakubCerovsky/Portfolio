@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 30vh;
+    min-height: 350px;
     transition: 0.5s;
 }
 
@@ -11,10 +11,28 @@
     color: var(--color-light);
 }
 
-.content-title{
-    font-size: 40px;
+.content-title-container{
     width: fit-content;
 }
+.content-title{
+    text-align: left;
+    font-size: 40px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  border-right: 4px solid var(--color-grey); /* The typwriter cursor */
+  padding-right: 1rem;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 4s;
+  
+  /* -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
 
 .content-text{
     margin-top: 2rem;
@@ -23,8 +41,41 @@
 }
 
 .content-text-container{
-    height: 70%;
+    min-height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media screen and (max-width:800px)
+ {
+    .content-title{
+        font-size: 32px;
+    }
+
+    .content-text{
+        margin-top: 0.8rem;
+    }
+}
+
+@media screen and (max-width:700px)
+ {
+    .content-container{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px)
+ {
+    .content-title{
+        font-size: 26px;
+    }
+    .content-text{
+        font-size: 15px;
+    }
+    .content-text-container{
+        min-height: 250px;
+        justify-content: flex-start;
+    }
 }

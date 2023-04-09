@@ -1,38 +1,25 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { ComponentsContext } from '../ComponentsContext.js';
 import './projects.css';
 
-const Projects = ({updateChildState, resetChildState}) => {
- 
-  const handleState1Click = () => {
-    resetChildState();
-    updateChildState("Zealand");
 
-  };
 
-  const handleState2Click = () => {
-    resetChildState();
-    updateChildState("GPT3");
+const Projects = () => {
+  const {setActive} = useContext(ComponentsContext);
 
-  };
-
-  const handleState3Click = () => {
-    resetChildState();
-    updateChildState("Paddle");
-
-  };
 
   return (
-    <div className='projects-container left-border'>
+    <div className='projects-container'>
       <h2 className='projects-title bottom-border'>Projects</h2>
       <ul className="projects-links">
           <li>
-            <button onClick={handleState1Click}>Zealand Marketplace</button>
+            <button onClick={() => {setActive("Zealand")}}>Zealand Marketplace</button>
           </li>
           <li>
-            <button onClick={handleState2Click}>GPT3 - Recreation</button>
+            <button onClick={() => {setActive("GPT3")}}>GPT3 - Recreation</button>
           </li>
           <li>
-            <button onClick={handleState3Click}>Paddle Nation</button>
+            <button onClick={() => {setActive("Paddle")}}>Paddle Nation</button>
           </li>
         </ul>
     </div>

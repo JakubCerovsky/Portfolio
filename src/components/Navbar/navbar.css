@@ -13,8 +13,7 @@
     cursor: pointer;
 }
 .navbar-photo:hover{
-    transform:translateY(-5px);
-    box-shadow: 0 5px 10px 5px var(--color-grey);
+    transform:translateY(-2px) scale(1.01);
 }
 
 .icons{
@@ -62,4 +61,51 @@
     outline: none;
     color: var(--color-dark);
     background-color: var(--color-light);
+}
+
+#logo{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width:1200px)
+ {
+    .intro_specials{
+        width: 65%;
+    }
+    .contact-me-btn{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:700px)
+ {
+    .navbar-photo{
+        display: none;
+    }
+    .navbar-container{
+        justify-content: center;
+    }
+    .intro_specials{
+        width: 100%;
+    }
+    .socials{
+        justify-content: flex-start;
+    }
+    .icons{
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen and (max-width:700px)
+ {
+
+    .icons{
+        margin-right: 1rem;
+    }
+
+    .contact-me-btn{
+        font-size: 15px;
+    }
 }

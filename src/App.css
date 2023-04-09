@@ -3,7 +3,12 @@
     padding: 0;
     margin: 0;
     font-family: var(--font-family);
+    user-drag: none;
+    -webkit-user-drag: none;
     user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
@@ -21,7 +26,7 @@ body {
 }
 
 .app-container-content {
-    width: 80%;
+    width: 85%;
     padding-left: 5rem;
     position: relative;
 }
@@ -45,8 +50,7 @@ body {
     overflow: hidden;
     z-index: 1;
 }
-
-.name-container__title {
+.name-subcontainer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -55,7 +59,7 @@ body {
     transition: all 1s ease;
 }
 
-.name-container__title div {
+.name-subcontainer div {
     display: flex;
     animation: scrollText 60s infinite linear;
 }
@@ -69,6 +73,15 @@ body {
     margin: 0 12rem;
     transition: all 2s ease;
 }
+.footer{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 15px;
+    height: 200px;
+    text-align: center;
+    color: var(--color-grey);
+    font-weight: bold;
+}
 
 @keyframes scrollText {
     from {
@@ -79,3 +92,95 @@ body {
         transform: translateX(-50%);
     }
 }
+
+#copyrights{
+    display: none;
+}
+
+@media screen and (max-width:1500px)
+ {
+   .name-container-text{
+    font-size: 150px;
+    line-height: 150px;
+   }
+    
+   .footer{
+    height: 150px;
+   }
+}
+
+@media screen and (max-width:1200px)
+ {
+    .app-container-content{
+        padding-left: 3rem;
+    }
+    
+}
+
+@media screen and (max-width:800px)
+ {
+    .app-container-skills{
+        padding: 1rem 1rem;
+    }
+    .app-container-content{
+        width: 90%;
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (max-width:700px)
+ {
+    body{
+        overflow-y: auto;
+    }
+    .app-container-skills{
+        display: none;
+    }
+    .app-container{
+        margin-top: 2rem;
+        height: auto;
+    }
+    .app-container-content{
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (max-width:600px)
+ {
+    .app-container{
+        margin-top: 1rem;
+        height: auto;
+    }
+    .name-container{
+        position: relative;
+    }
+    .name-container-text{
+        font-size: 100px;
+        line-height: 100px;
+        margin: 0 6rem;
+    }
+    .footer{
+        display: none;
+    }
+    #copyrights{
+        display: flex;
+        width: 100%;
+        padding: 1rem 0;
+        justify-content: center;
+        align-items: center;
+    }
+    #copyrights p{
+        color:var(--color-grey);
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width:350px)
+ {
+    .app-container-content{
+        width: 99%;
+        padding: 1rem;
+    }
+}
+

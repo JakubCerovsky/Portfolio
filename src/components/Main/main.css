@@ -5,3 +5,34 @@
     align-self: center;
     flex-direction: row;
 }
+
+.selection{
+    user-select:text;
+}
+.selection::selection{
+    background: var(--color-grey);
+    color: var(--color-light);
+}
+
+@media screen and (max-width:1500px)
+ {
+    .main-container{
+        margin-top: 1rem;
+    }
+    
+}
+
+@media screen and (max-width:700px)
+ {
+    .main-container{
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width:600px)
+ {
+    .main-container{
+        margin-top: 1rem;
+    }
+}

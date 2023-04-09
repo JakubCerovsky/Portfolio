@@ -1,24 +1,18 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import { ImGithub } from 'react-icons/im';
 import {BsLinkedin, BsFillFileEarmarkPersonFill} from 'react-icons/bs';
 import { IconContext } from "react-icons";
+import { ComponentsContext } from '../../containers/ComponentsContext.js';
+
 import './navbar.css';
 
-const Navbar = ({ updateParentState }) => {
-
-  const [value, setValue] = useState(null);
-
-  const handleButtonClick = () => {
-    const newState = "Contact";
-    setValue(newState);
-    updateParentState(newState);
-  };
-
+const Navbar = () => {
+  const {setActive} = useContext(ComponentsContext);
 
   return (
     <div className='navbar-container'>
       <div>
-        <img src="photo.png" alt='logo' className='navbar-photo'/>
+        <button onClick={() => setActive("Main")} id='logo'><img src="photo.png" alt='logo' className='navbar-photo'/></button>
       </div>
       <div className="intro_specials">
       <IconContext.Provider value={{ color: "var(--color-light)", size: "2.5rem", className: "icons" }}>
@@ -34,7 +28,7 @@ const Navbar = ({ updateParentState }) => {
           </li>
         </ul>
         </IconContext.Provider>
-        <button onClick={handleButtonClick} className='contact-me-btn'>Contact me!</button>
+        <button onClick={() => {setActive("Contact")}} className='contact-me-btn'>Contact me!</button>
       </div>
     </div>
   )
