@@ -37,7 +37,7 @@ const Main = () => {
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.7 }
             }}  className='content-container'>
-            <Content key={"Hello and Welcome!"} title={"Hello and Welcome!"} text={"My name is Jakub and I am aspiring Full-Stack Developer born in the Czech Republic. I am currently approaching a Bachalor degree from Software Engineering at VIA University Horsens. I believe that I am a responsible, ambitious and result-oriented person, driven to learn something new every day. In my free time I like to go to the gym, play football, or just drink a beer with my friends."} text2={"Do you want to find out more about me? Check out my projects or get it touch with me via mail or LinkedIn!"}  />
+            <Content key={"Hello and Welcome!"} title={"Hello and Welcome!"} text={"My name is Jakub and I am an aspiring Full-Stack Developer born in the Czech Republic. I am currently approaching a Bachelor's degree in Software Engineering at VIA University Horsens. I believe that I am a responsible, ambitious and result-oriented person, driven to learn something new every day. In my free time, I like going to the gym, playing football, or drinking beer with my friends."} text2={"Do you want to find out more about me? Check out my projects or get it to touch with me via mail or LinkedIn!"}  />
           </motion.div>}
           {active === "Zealand" && <motion.div variants={variants}
             key="zealand"
@@ -47,7 +47,7 @@ const Main = () => {
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 }
-            }}  className='content-container'><Content key={"Zealand Marketplace"} title={"Zealand Marketplace"} text={"Blazor Web Application with C# and Azure Database, working as a second-hand marketplace. Other technologies used were Entity Framework Code First Approach and MySQL. Users can log in or register themselves, add items and create reviews. No payment methods were implemented."} text2={""}/>
+            }}  className='content-container'><Content key={"Zealand Marketplace"} title={"Zealand Marketplace"} text={"Blazor Web Application with C# and Azure Database, working as a second-hand marketplace. Other technologies used were Entity Framework, MySQL and SCRUM. Users can log in or register themselves, add items and create reviews."} text2={"The application was created as a second-semester project at Zealand Academy in a group of 4."}/>
           </motion.div>}
           {active === "GPT3" && <motion.div variants={variants}
             key="gpt3"
@@ -57,7 +57,7 @@ const Main = () => {
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 }
-            }}  className='content-container'><Content key={"GPT3 - Recreation"} title={"GPT3 - Recreation"} text={["Following Figma design to create a fully responsive React Web Application was a great way to better understand ReactJS. You can visit the website at ",<span key="web" className='selection'>jakubcerovsky-gpt3.com</span>," or view the code at my GitHub profile."]}/></motion.div>}
+            }}  className='content-container'><Content key={"GPT3 - Recreation"} title={"GPT3 - Recreation"} text={["Following Figma design to create a fully responsive React Web Application was a great way to better understand ReactJS. Currently, I am working on a similar Web Application using Tailwind CSS to level up my Frontend skills."]} text2={["You can visit the website at ",<a key="linkto" href='https://jakubcerovsky-gpt3.com/' className="in-text-link" target='_blank' rel="noreferrer">jakubcerovsky-gpt3.com</a>," or view the code at my GitHub profile."]} /></motion.div>}
           {active === "Paddle" && <motion.div variants={variants}
             key="paddle"
             initial="enter"
@@ -66,7 +66,7 @@ const Main = () => {
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 }
-            }}  className='content-container'><Content key={"Paddle Nation"} title={"Paddle Nation"} text={"As a part of a group created by students of VIA, I am working as a Full-Stack Developer with a focus on the front end. Paddle Nation is in the developing stage with the vision of creating a system with renting and payment methods. C#, React, and Rest API, the leading technologies used for the system functionality."} text2={"Project will be soon deployed and available for customers."} /></motion.div>}
+            }}  className='content-container'><Content key={"Paddle Nation"} title={"Paddle Nation"} text={"As a part of a group created by students of VIA, I am working as a Full-Stack Developer with a focus on the front end. Paddle Nation is in the developing stage with the vision of creating a system with renting and payment methods. C#, React, and Rest API are the leading technologies used for system functionality."} text2={"The project will be soon deployed and available for customers."} /></motion.div>}
           {active === "Contact" && <motion.div variants={variants}
             key="contact"
             initial="enter"
@@ -75,7 +75,7 @@ const Main = () => {
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 }
-            }}  className='content-container'><Content key={"Let's connect!"} title={"Let's connect!"} text={"Do you feel like I would be a match for your team? Or you just want to stay in touch?"} text2={["Let's connect on LinkedIn, or just send me an mail at ",<span key="mail" className='selection'>jacobcerovsky@gmail.com</span>,"."]} /></motion.div>}
+            }}  className='content-container'><Content key={"Let's connect!"} title={"Let's connect!"} text={"Do you feel like I would be a match for your team? Or do you just want to stay in touch? I am currently looking for a place to start my career as a student worker, so hit me up with any opportunities!"} text2={["Let's connect on LinkedIn, or just ", <a key="mailto" href='mailto:jacobcerovsky@gmail.com' className='in-text-link'>send me a mail</a> ," at ",<span key="mail" className='selection'>jacobcerovsky@gmail.com</span>,"."]} /></motion.div>}
         </AnimatePresence>
         <Projects/>
       </div>
