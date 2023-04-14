@@ -4,7 +4,6 @@
     flex-direction: column;
     width: 60%;
     min-height: 350px;
-    transition: 0.5s;
 }
 
 .content-title, .content-text{
